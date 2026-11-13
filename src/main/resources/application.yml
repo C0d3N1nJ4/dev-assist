@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: dev-assist
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:}
+      # Uncomment and configure other providers as needed:
+      # anthropic:
+      #   api-key: ${ANTHROPIC_API_KEY:}
+      # ollama:
+      #   base-url: http://localhost:11434
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.example.devassist: DEBUG
+    org.springframework.ai: DEBUG
